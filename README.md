@@ -35,11 +35,14 @@ You will need a text editor in order to change the code. I use Atom
 [Download Atom text editor](https://atom.io/)
 
 - open taxi.h (or whatever you have titled your file) in Atom\
-open the search and replace `Find > Find in Buffer`\
-Find `char trash(.*)_bits`\
+open the search and replace `Find > Find in Buffer`
+
+Find `char trash(.*)_bits`
+
 Replace `uint8_t trash$1`
 
 ![Atom search and replace](/images/taxiH.png )
+
 This uses a regular expression to change the arrays from a char to a uint8_t but keeps the numbering system. [For more information on regular expressions read the wiki entry.](https://en.wikipedia.org/wiki/Regular_expression)
 
 ## Programming the Microcontroller
@@ -50,11 +53,11 @@ You will need to [Download Arduino](https://www.arduino.cc/en/software) and
 
 In order for Arduino to talk to the Wemos you will need to open the boards manager
 
-![Arduino boards manager](/images/boards-manager.png)\
+![Arduino boards manager](/images/boards-manager.png)
 
-and insert this link into the Additional Boards Manager URLs:\
+and insert this link into the Additional Boards Manager URLs:
 
-![Arduino boards manager](/images/prefs.png )
+![Arduino boards manager](/images/prefs.png)
 
 https://arduino.esp8266.com/stable/package_esp8266com_index.json
 
@@ -69,7 +72,7 @@ To connect the Wemos to the OLED you will need to install the Thingpulse library
 - Download this repository and open SH1106-single-screen.ino in arduino
 - Connect the Wemos to your computer
 - In the tools menu change the board to Wemos
-- 
+
 ![Change the board to Wemos](/images/tools.png)
 
 - Change the port to the correct port for the board, this may take some trial and error
