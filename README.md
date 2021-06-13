@@ -63,16 +63,13 @@ and follow the instructions for your operating system. This is a free command li
 - Open the directory with the PSD in your terminal.
 If you do not know how to do this then this page shows how to [Open a Command Prompt or Terminal to a Specific Folder in Windows, Mac or Linux](https://www.groovypost.com/howto/open-command-window-terminal-window-specific-folder-windows-mac-linux/)
 
-- convert photoshop layers to png
-`convert puke.psd -coalesce puke%d.png`
+- `convert puke.psd -coalesce puke%d.png`
 This command converts all the layers in your photoshop file to an individual png
 
-- convert png layers to xbm
-`mogrify -resize 128x64 +dither -format xbm *.png`
+- `mogrify -resize 128x64 +dither -format xbm *.png`
 This command converts all the png files to an XBM file, which is C source code. It converts the pixels into co-ordinates
 
-- convert xbm to file
-`cat *.xbm | sed s/static/const/ | sed s/=/PROGMEM=/  > taxi.h`
+- `cat *.xbm | sed s/static/const/ | sed s/=/PROGMEM=/  > taxi.h`
 This command aggregates all the XBM files into one file which can be used in Arduino.
 
 You will need a text editor in order to change the code. I use Atom
