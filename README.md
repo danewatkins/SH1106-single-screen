@@ -64,15 +64,15 @@ and follow the instructions for your operating system. This is a free command li
 If you do not know how to do this then this page shows how to [Open a Command Prompt or Terminal to a Specific Folder in Windows, Mac or Linux](https://www.groovypost.com/howto/open-command-window-terminal-window-specific-folder-windows-mac-linux/)
 
 - `convert puke.psd -coalesce puke%d.png`
-- 
+
 This command converts all the layers in your photoshop file to an individual png
 
 - `mogrify -resize 128x64 +dither -format xbm *.png`
-- 
+
 This command converts all the png files to an XBM file, which is C source code. It converts the pixels into co-ordinates
 
 - `cat *.xbm | sed s/static/const/ | sed s/=/PROGMEM=/  > taxi.h`
-- 
+
 This command aggregates all the XBM files into one file which can be used in Arduino.
 
 You will need a text editor in order to change the code. I use Atom
@@ -81,9 +81,9 @@ You will need a text editor in order to change the code. I use Atom
 - open taxi.h (or whatever you have titled your file) in Atom\
 open the search and replace `Find > Find in Buffer`
 
-Find `char trash(.*)_bits`
+- Find `char trash(.*)_bits`
 
-Replace `uint8_t trash$1`
+- Replace `uint8_t trash$1`
 
 ![Atom search and replace](/images/taxiH.png )
 
